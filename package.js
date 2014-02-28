@@ -6,4 +6,8 @@ Package.on_use(function (api, where) {
   api.use('d3');
 
   api.add_files('dc.js/dc.js', 'client');
+
+  if (typeof api.export !== 'undefined') {
+    api.export('dc', 'client');
+  }
 });
